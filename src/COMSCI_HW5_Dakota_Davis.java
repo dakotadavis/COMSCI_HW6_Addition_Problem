@@ -4,7 +4,10 @@ public class COMSCI_HW5_Dakota_Davis {
 	        // Outline for addition problem.
 	        
 			System.out.println("Let's play a game!");
-			
+			System.out.println("With every correct answer, the next question will be harder.");
+			System.out.println("With every incorrect answer, the next question will be easier.");
+			System.out.println("There will be four rounds. Highest possible score is 11110.");
+			System.out.println("Good luck!");
 			int score = 0;
 	        int hardnessOfQuestion = 10;
 	        // Round 1
@@ -54,14 +57,108 @@ public class COMSCI_HW5_Dakota_Davis {
 	            
 	            //            Make the next question easier
 	            if(hardnessOfQuestion>10){
-	                hardnessOfQuestion /=10;
+	                hardnessOfQuestion /=10;}}
 	                
 	       //Round 2
 	                
 	                //Repeat the process, without ints
-	                
-	            }
+	        
+	        number1 = (int)(Math.random() * hardnessOfQuestion);
+	        number2 = (int)(Math.random() * hardnessOfQuestion);
+	        
+	        correctAnswer = number1 + number2;
+	        
+	        System.out.println
+	        ("What is " + number1 + " + " + number2 + "?");
+	        
+	        studentAnswer = input.nextInt();
+	        
+	        if (studentAnswer == correctAnswer){
+	        	
+	        	System.out.println("Answer was correct");
+	        	
+	            score += hardnessOfQuestion;
 	            
+	            System.out.println("Score:" + score);
+	            
+	            hardnessOfQuestion *= 10;
 	        }
-	}
-}
+	        
+	        else{
+	        	
+	            System.out.println("Answer was not correct");
+	            
+	            System.out.println("Correct answer was: " + correctAnswer);
+	            
+	            if(hardnessOfQuestion>10){
+	                hardnessOfQuestion /=10;}}
+	                
+	        //Round 3
+	                number1 = (int)(Math.random() * hardnessOfQuestion);
+	    	        number2 = (int)(Math.random() * hardnessOfQuestion);
+	    	        
+	    	        correctAnswer = number1 + number2;
+	    	        
+	    	        System.out.println
+	    	        ("What is " + number1 + " + " + number2 + "?");
+	    	        
+	    	        studentAnswer = input.nextInt();
+	    	        
+	    	        if (studentAnswer == correctAnswer){
+	    	        	
+	    	        	System.out.println("Answer was correct");
+	    	        	
+	    	            score += hardnessOfQuestion;
+	    	            
+	    	            System.out.println("Score:" + score);
+	    	            
+	    	            hardnessOfQuestion *= 10;
+	    	        }
+	    	        
+	    	        else{
+	    	        	
+	    	            System.out.println("Answer was not correct");
+	    	            
+	    	            System.out.println("Correct answer was: " + correctAnswer);
+	    	            
+	    	            if(hardnessOfQuestion>10){
+	    	                hardnessOfQuestion /=10;}}
+	    	  //Round 4
+	    	        number1 = (int)(Math.random() * hardnessOfQuestion);
+	    	        number2 = (int)(Math.random() * hardnessOfQuestion);
+	    	        
+	    	        correctAnswer = number1 + number2;
+	    	        
+	    	        System.out.println
+	    	        ("What is " + number1 + " + " + number2 + "?");
+	    	        
+	    	        studentAnswer = input.nextInt();
+	    	        
+	    	        if (studentAnswer == correctAnswer){
+	    	        	
+	    	        	System.out.println("Answer was correct");
+	    	        	
+	    	            score += hardnessOfQuestion;
+	    	            
+	    	            System.out.println("Score:" + score);
+	    	            
+	    	            hardnessOfQuestion *= 10;
+	    	        }
+	    	        
+	    	        else{
+	    	        	
+	    	            System.out.println("Answer was not correct");
+	    	            
+	    	            System.out.println("Correct answer was: " + correctAnswer);
+	    	            
+	    	            if(hardnessOfQuestion>10){
+	    	                hardnessOfQuestion /=10;}}
+	    	                
+	    	    	    if(score == 11110)     {
+	    	    	    	System.out.println("Good job, you got the high score!");}
+	    	    	    else{
+	    	    	    	System.out.println("Nice try, but you could have done better.");
+	    	    	    }
+
+	    	            }}
+	    	            
